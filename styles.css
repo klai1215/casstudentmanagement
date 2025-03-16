@@ -1,0 +1,121 @@
+/* Sidebar Styles */
+.sidebar {
+    background: white;
+    width: 250px;
+    min-height: 100vh;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: fixed;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    margin-left: -250px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-header img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    margin: 5px 0;
+}
+
+.menu-item a,
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.menu-item a:hover,
+.dropdown-toggle:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.menu-item.active a {
+    background: var(--primary-color);
+    color: white;
+}
+
+.menu-icon-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Dropdown specific styles */
+.dropdown-toggle {
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    padding: 5px 0 5px 43px;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+}
+
+.dropdown-menu a {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    border-radius: 6px;
+}
+
+.dropdown-menu a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.menu-item.dropdown.active .dropdown-toggle {
+    background: var(--primary-color);
+    color: white;
+}
+
+.menu-item.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.menu-item.dropdown.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Icon styles */
+.fas {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
